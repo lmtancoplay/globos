@@ -23,7 +23,7 @@ class Globo
   {
       ellipse(x,y,100,140);
       imageMode(CENTER);
-      image(fondo,x,y,90,120);
+      image(fondo,x,y,81,101);
   }
   
 }
