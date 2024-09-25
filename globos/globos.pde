@@ -1,8 +1,12 @@
+PImage payaso;
+
 class Globo
 {
   float x, y,vx,vy;
-  Globo (float _x, float _y)
+  PImage fondo;
+  Globo (PImage img, float _x, float _y)
   {
+   fondo = img; 
    x=_x;
    y=_y; 
    vx=random(-0.25,0.25);
@@ -18,6 +22,8 @@ class Globo
   void dibujate()
   {
       ellipse(x,y,100,140);
+      imageMode(CENTER);
+      image(fondo,x,y,90,120);
   }
   
 }
@@ -28,7 +34,8 @@ ArrayList<Globo> globos;
 void setup()
 {
   size(640,480);
-  globos = new ArrayList<Globo>();  
+  globos = new ArrayList<Globo>();
+  payaso = loadImage("clown.png");
 }
 
 void draw()
@@ -43,5 +50,5 @@ void draw()
 
 void mousePressed()
 {
-  globos.add(new Globo(mouseX,mouseY));
+  globos.add(new Globo(payaso, mouseX,mouseY));
 }
