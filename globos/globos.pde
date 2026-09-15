@@ -19,21 +19,23 @@ class Globo
 
   void dibujate()
   {
+
       fill(c);
+      imageMode(CENTER);
       ellipse(x,y,80,100);
+      image(cara,x,y,60,60);
       triangle(x,y+50,x-10,y+60,x+10,y+60);
   }
-  
 }
-
+PImage cara; 
 ArrayList<Globo> globos;
-
 
 void setup()
 {
   size(640,480);
   globos = new ArrayList<Globo>();
   println("ARRANCA PROGRAMA"); 
+  cara = loadImage("face.png");
 }
 
 void draw()
