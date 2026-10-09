@@ -24,6 +24,7 @@ class Globo
       fill(c);
       strokeWeight(3);
       ellipse(x,y,70,100);
+      triangle(x,y+50, x-10,y+60, x+10,y+60);
   }
   
 }
