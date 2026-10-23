@@ -1,3 +1,4 @@
+
 class Globo
 {
   float x, y,vx,vy;
@@ -21,6 +22,8 @@ class Globo
   {
       fill(c);
       ellipse(x,y,80,100);
+      imageMode(CENTER);
+      image(cara,x,y,70,90);
       triangle(x,y+50,x-10,y+60,x+10,y+60);
   }
   
@@ -28,16 +31,19 @@ class Globo
 
 ArrayList<Globo> globos;
 
-
+PImage cara; 
 void setup()
 {
   size(800,1000);
-  globos = new ArrayList<Globo>();  
+  globos = new ArrayList<Globo>();
+  cara = loadImage("donald.png");
+ 
 }
 
 void draw()
 {
   background(0,100,250);
+ 
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();
