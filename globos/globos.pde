@@ -1,7 +1,11 @@
 
 class Globo
 {
-  float x, y,vx,vy;
+  // Atributos de la clase globo
+  // Posicion, velocidad, aceleracion
+  float x, y,vx,vy,ax,ay;
+
+  // Constructor de la clase 
   Globo (float _x, float _y)
   {
    x=_x;
